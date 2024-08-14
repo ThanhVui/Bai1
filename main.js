@@ -796,3 +796,5 @@ Hàm (function) trong Javascript
 
 // var result = course.coin > 0 ? `${course.coin} Coins` : 'Free Course'
 // console.log(result)
+/** ---------------------------------------------------------------------------------- */
+
