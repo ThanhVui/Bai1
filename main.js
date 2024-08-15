@@ -797,4 +797,222 @@ Hàm (function) trong Javascript
 // var result = course.coin > 0 ? `${course.coin} Coins` : 'Free Course'
 // console.log(result)
 /** ---------------------------------------------------------------------------------- */
+/*
+Vòng lặp - Loop 
+    1. for - Lặp với điều kiện đúng
+    2. for/in - Lặp qua key của đối tượng
+    3. for/of - Lặp qua value của đối tượng
+    4. while - Lặp khi điều kiện đúng
+    5. do/while - Lặp ít nhất 1 lần, sau đó
+    lặp khi điều kiện đúng
+*/
+// for (var i = 1; i <= 10; i++) {
+//     console.log(i)
+// }
 
+// var myArray = [
+//     'javascript',
+//     'java',
+//     'kotlin',
+//     'react'
+// ]
+
+// var arrayLength = myArray.length
+
+// for (var i = 0; i < arrayLength; i++) {
+//     console.log(myArray[i])
+// }
+
+// var myInfo = {
+//     name: 'javascript',
+//     age: 21,
+//     adress: 'kotlin'
+// }
+
+// for (var key in myInfo) {
+//     console.log(myInfo[key]) // return value of object
+//     // console.log(key) // return key of object
+// }
+
+// var myArray = [
+//     'javascript',
+//     'java',
+//     'kotlin',
+//     'react'
+// ]
+
+
+// for (var key in myArray) {
+//     console.log(myArray[key])
+// }
+
+// var fullName = 'Tang Thanh Vui'
+// for (var key in fullName) {
+//     console.log(fullName[key])
+// }
+
+// var fullName = 'Tang Thanh Vui'
+// for (var value of fullName) {
+//     console.log(value)
+// }
+
+// var myInfo = {
+//     name: 'Thanh Vui',
+//     age: 21
+// }
+
+// console.log(Object.keys(myInfo))
+// console.log(Object.values(myInfo))
+
+// for (var value of Object.values(myInfo)) {
+//     console.log(value)
+// }
+// for (var value of Object.keys(myInfo)) {
+//     console.log(value)
+// }
+
+// var myArray = [
+//     'javascript',
+//     'java',
+//     'kotlin',
+//     'react'
+// ]
+
+// var i = 0 
+// while (i < myArray.length) {
+//     console.log(myArray[i])
+//     i++
+// 
+
+// var i = 0
+// do {
+//     i++
+//     console.log(i)
+// } while (i < 10)
+
+// var i = 0
+// var isSuccess = false
+
+// do {
+//     i++
+//     console.log('Times: ' + i)
+
+//     if (false) {
+//         isSuccess = true
+//     }
+// } while (!isSuccess && i <= 3)
+
+// for (var i = 0; i < 10; i++) {
+//     console.log(i)
+
+//     if (i >= 5) {
+//         break;
+//     }
+// }
+
+// for (var i = 0; i < 10; i++) {
+//     if (i % 2 != 0) {
+//         continue
+//     }
+
+//     console.log(i)
+// }
+
+// var myLocation = [
+//     [1, 2],
+//     [3, 4], 
+//     [6, 9]
+// ]
+
+// for (var i = 0; i < myLocation.length; i++) {
+//     for (var j = 0; j < myLocation[i].length; j++) {
+//         console.log(myLocation[i][j])
+//     }
+// }
+
+// for (var i = 100; i >= 0; i -= 5) {
+//     console.log(i)
+// }
+
+/** ---------------------------------------------------------------------------------- */
+/**
+ * Array methods:
+    forEach()
+    every()
+    some ()
+    find()
+    filter()
+    map ()
+    reduce ()
+ */
+var courses = [
+    {
+        id: 1,
+        name: 'javascript',
+        coin: 250
+    },
+    {
+        id: 2,
+        name: 'java',
+        coin: 0
+    },
+    {
+        id: 3,
+        name: 'kotlin',
+        coin: 4
+    },
+    {
+        id: 4,
+        name: 'react',
+        coin: 2
+    },
+    {
+        id: 5,
+        name: 'nodejs',
+        coin: 0
+    }
+]
+
+// courses.forEach(function(index, course) {
+//     console.log(index, course) // course is a element of the array
+// })
+
+// var isFree = courses.every(function(course) {
+//     return course.coin === 0
+// })
+// console.log(isFree)
+
+// var isFree = courses.some(function(course) {
+//     return course.coin === 0
+// })
+// console.log(isFree)
+
+// var couseFree = courses.find(function(course) {
+//     return course.coin === 0
+// })
+// console.log(couseFree)
+
+// var couseFree = courses.filter(function(course) {
+//     return course.coin === 0
+// })
+// console.log(couseFree)
+
+function courseHandle(course) {
+    // console.log(course)
+    return {
+        id: course.id,
+        name: `Course Name: ${course.name}`,
+        coin: course.coin,
+        coinText: `Price: ${course.coin}`,
+    }
+}
+
+function courseName(course) {
+    // console.log(course)
+    return `Course Name: ${course.name}`
+    
+}
+
+var newCourse = courses.map(courseName) 
+
+console.log(newCourse.join('\n'))
