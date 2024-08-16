@@ -945,33 +945,33 @@ Vòng lặp - Loop
     map ()
     reduce ()
  */
-var courses = [
-    {
-        id: 1,
-        name: 'javascript',
-        coin: 250
-    },
-    {
-        id: 2,
-        name: 'java',
-        coin: 0
-    },
-    {
-        id: 3,
-        name: 'kotlin',
-        coin: 4
-    },
-    {
-        id: 4,
-        name: 'react',
-        coin: 2
-    },
-    {
-        id: 5,
-        name: 'nodejs',
-        coin: 0
-    }
-]
+// var courses = [
+//     {
+//         id: 1,
+//         name: 'javascript',
+//         coin: 250
+//     },
+//     {
+//         id: 2,
+//         name: 'java',
+//         coin: 0
+//     },
+//     {
+//         id: 3,
+//         name: 'kotlin',
+//         coin: 4
+//     },
+//     {
+//         id: 4,
+//         name: 'react',
+//         coin: 2
+//     },
+//     {
+//         id: 5,
+//         name: 'nodejs',
+//         coin: 0
+//     }
+// ]
 
 // courses.forEach(function(index, course) {
 //     console.log(index, course) // course is a element of the array
@@ -997,22 +997,285 @@ var courses = [
 // })
 // console.log(couseFree)
 
-function courseHandle(course) {
-    // console.log(course)
-    return {
-        id: course.id,
-        name: `Course Name: ${course.name}`,
-        coin: course.coin,
-        coinText: `Price: ${course.coin}`,
-    }
-}
+// function courseHandle(course) {
+//     // console.log(course)
+//     return {
+//         id: course.id,
+//         name: `Course Name: ${course.name}`,
+//         coin: course.coin,
+//         coinText: `Price: ${course.coin}`,
+//     }
+// }
 
-function courseName(course) {
-    // console.log(course)
-    return `Course Name: ${course.name}`
+// function courseName(course) {
+//     // console.log(course)
+//     return `Course Name: ${course.name}`
     
-}
+// }
 
-var newCourse = courses.map(courseName) 
+// var newCourse = courses.map(courseName)
 
-console.log(newCourse.join('\n'))
+// console.log(newCourse.join('\n'))
+
+// var totalCoin = 0
+// for (var course of courses) {
+//     totalCoin += course.coin
+// }
+
+// console.log('Total Coin: ' + totalCoin)
+
+// var i = 0;
+// function coinHandler(accumulator, currentValue, currentIndex, orginArray) {
+//     i++
+//     var total = accumulator + currentValue.coin
+
+//     console.table({
+//         'Run times: ': i,
+//         'Store variable: ': accumulator,
+//         'Price: ': currentValue.coin,
+//         'total store: ': total
+//     })
+//     console.log(currentValue)
+
+//     return total
+// }
+
+// var totalCoin = courses.reduce(coinHandler, 0)
+// console.log(totalCoin)
+
+
+// var totalCoin = courses.reduce(function(accumulator, currentValue, currentIndex, orginArray) {
+//     return accumulator + currentValue.coin
+// }, 0)
+// console.log(totalCoin)
+
+// var totalCoin = courses.reduce((a, b) =>
+//     a + b.coin, 0)
+// console.log(totalCoin)
+
+
+// var numbers = [100, 200, 300, 400, 500]
+// var totalCoin = numbers.reduce(function(total, number) {
+//     return total + number
+// })
+// console.log(totalCoin)
+
+// var numbers = [100, 200, 300, 400, 500]
+// var totalCoin = numbers.reduce((total, number) =>
+//     total + number
+// )
+// console.log(totalCoin)
+
+// var depthArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]]
+// var flatArray = depthArray.reduce(function(flatOutput, depthItem) {
+//     return flatOutput.concat(depthItem)
+// }, [])
+// console.log(flatArray)
+
+// var topics = [
+//     {
+//         topic: 'font-end',
+//         courses: [
+//             {
+//                 id: 1,
+//                 title: 'HTML, CSS'
+//             },
+//             {
+//                 id: 2,
+//                 title: 'javascript'
+//             }
+//         ]
+//     },
+//     {
+//         topic: 'back-end',
+//         courses: [
+//             {
+//                 id: 1,
+//                 title: 'PHP'
+//             },
+//             {
+//                 id: 2,
+//                 title: 'NodeJS'
+//             }
+//         ]
+//     }
+// ]
+
+// var newCourse = topics.reduce(function(courses, topic) {
+//     return courses.concat(topic.courses)
+// }, [])
+// console.log(newCourse)
+
+// var htmls = newCourse.map(function(course) {
+//     return `
+//         <div>
+//             <h2>${course.title}</h2>
+//             <p>ID: ${course.id}</p>
+//         </div>
+//     `
+// })
+
+// console.log(htmls.join(''))
+
+/** ---------------------------------------------------------------------------------- */
+/**
+ * includes method
+ */
+// var title = 'Responsive wed design'
+// console.log(title.includes('wed design', 0))
+
+// var languages = [
+//     'javascript',
+//     'kotlin',
+//     'dart'
+// ]
+// console.log(languages.includes('kotlin'))
+
+/** ---------------------------------------------------------------------------------- */
+/*
+Math object
+- Math.PI
+- Math. round ()
+- Math.abs ()
+- Math.ceil()
+- Math.floor()
+- Math.random()
+- Math.min()
+- Math.max()
+*/
+
+// console.log(Math.PI)
+// console.log(Math.round(3.5))
+// console.log(Math.abs(-3.4))
+// console.log(Math.ceil(4.1))
+// console.log(Math.floor(4.1))
+// console.log(Math.floor(Math.random() * 10))
+
+// // var ramdom = Math.floor(Math.random() * 5)
+// // var bonus = [
+// //     '10 coin',
+// //     '20 coin',
+// //     '30 coin',
+// //     '40 coin',
+// //     '50 coin'
+// // ]
+// // console.log(bonus[ramdom])
+
+// var ramdom = Math.floor(Math.random() * 100)
+// if (ramdom < 5) {
+//     console.log('Corgratolation!')
+// }
+
+// console.log(Math.min(-100, 20))
+// console.log(Math.max(-100, 20))
+
+/** ---------------------------------------------------------------------------------- */
+/**
+ * Call back (function)
+ * 
+ * - is function 
+ * - passy by argument
+ */
+
+// function myFunction(param) {
+//     console.log(param)
+// }
+// myFunction(123)
+
+// function myFunction(param) {
+//     param('Study Programing')
+// }
+
+// function myCallBack(value) {
+//     console.log('Value: ', value)
+// }
+
+// myFunction(myCallBack)
+
+// var courses = [
+//     'Javascript',
+//     'PHP',
+//     'Ruby'
+// ]
+// var htmls = courses.map(function(course) {
+//     return `<h2>${course}</h2>`
+// })
+// console.log(htmls.join('\n'))
+
+// Array.prototype.map2 = function(callBack) {
+//     var arrayLength = this.length
+//     var output = []
+
+//     for (var i = 0; i < arrayLength; i++) {
+//         var result = callBack(this[i], i)
+//         output.push(result)
+//     }
+
+//     return output
+// }
+
+// var courses = [
+//     'Javascript',
+//     'PHP',
+//     'Ruby'
+// ]
+
+// // courses.map2(function(course, index) {
+// //     console.log(index, course)
+// // })
+
+// var htmls = courses.map2(function(course) {
+//     return `<h2>${course}</h2>`
+// })
+// console.log(htmls.join('\n'))
+
+/** ---------------------------------------------------------------------------------- */
+/**
+ * Array methods:
+    forEach()
+    every()
+    some ()
+    find()
+    filter()
+    map ()
+    reduce ()
+ */
+// var courses = [
+//     'Javascript',
+//     'PHP',
+//     'Ruby'
+// ]
+// courses.length = 10
+// // for (var i = 0; i < courses.length; i++) {
+// //     console.log(courses[i])
+// // }
+
+// for (var index in courses) {
+//     console.log(courses[index])
+// }
+
+// var courses = new Array(10)
+// courses.push('Javascript', 'java', 'kotlin')
+// console.log(courses)
+
+// for (var index in courses) {
+//     console.log(courses[index])
+// }
+
+// Array.prototype.forEach2 = function(callBack) {
+//     for (var index in this) {
+//         if (this.hasOwnProperty(index)) {
+//             callBack(this[index], index, this)
+//         }
+//     }
+// }
+
+// var courses = [
+//     'Javascript',
+//     'PHP',
+//     'Ruby'
+// ]
+
+// courses.forEach2(function(course, index, array) {
+//     console.log(course, index, array)
+// })
