@@ -1279,3 +1279,167 @@ Math object
 // courses.forEach2(function(course, index, array) {
 //     console.log(course, index, array)
 // })
+
+   // filter
+// Array.prototype.filter2 = function(callBack) {
+//    var output = []
+//    for (var index in this) {
+//       // console.log(this[index], index, this)
+//       if (this.hasOwnProperty(index)) {
+//          var result = callBack(this[index], index, this)
+//          if (result) {
+//             output.push(this[index])
+//          }
+//       }
+//    }
+//    return output
+// }
+
+// var courses = [
+//    {
+//       name: 'javascript',
+//       coin: 99
+//    },
+//    {
+//       name: 'java',
+//       coin: 200
+//    },   
+//    {
+//       name: 'kotlin',
+//       coin: 300
+//    }
+// ]
+// var filterCourses = courses.filter2(function(course, index, array) {
+//    return course.coin > 100
+// })
+
+// console.log(filterCourses)
+
+   // some()
+// Array.prototype.some2 = function(callBack) {
+//    var output = false
+
+//    for (var index in this) {
+//       if (this.hasOwnProperty(index)) {
+//          if (callBack(this[index], index, this)) {
+//             output = true
+//          }
+//       }
+//    }
+
+//    return output
+// }
+
+// var courses = [
+//    {
+//       name: 'javascript',
+//       coin: 99,
+//       isFinish: false
+//    },
+//    {
+//       name: 'java',
+//       coin: 200,
+//       isFinish: false
+//    },   
+//    {
+//       name: 'kotlin',
+//       coin: 300,
+//       isFinish: false
+//    }
+// ]
+
+// var filterCourses = courses.some2(function(course, index, array) {
+//    return course.isFinish
+// })
+
+// console.log(filterCourses)
+
+   // every()
+// Array.prototype.every2 = function(callBack) {
+//    var output = true
+
+//    for (var index in this) {
+//       if (this.hasOwnProperty(index)) {
+//          var result = callBack(this[index], index, this)
+//          if (!result) {
+//             output = false
+//          }
+//       }
+//    }
+
+//    return output
+// }
+
+// var courses = [
+//    {
+//       name: 'javascript',
+//       coin: 99,
+//       isFinish: true
+//    },
+//    {
+//       name: 'java',
+//       coin: 200,
+//       isFinish: true
+//    },   
+//    {
+//       name: 'kotlin',
+//       coin: 300,
+//       isFinish: true
+//    }
+// ]
+
+// var filterCourses = courses.every2(function(course, index, array) {
+//    return course.isFinish
+// })
+
+// console.log(filterCourses)
+
+// var arrayLoop = ['a', 'b', 'c', 'a', 'b', 'c']
+// console.log([...(new Set(arrayLoop))])
+
+// function countDown(number) {
+//    if (number > 0) {
+//       console.log(number)
+//       return countDown(number - 1)
+//    }
+//    return number
+// }
+
+// countDown(10)
+
+// function loop(start, end, callBack) {
+//    if (start < end) {
+//       callBack(start)
+//       return loop(start + 1, end, callBack)
+//    }
+// }
+
+// var array = [
+//    'javascript',
+//    'PHP',
+//    'Ruby'
+// ]
+
+// loop(0, array.length, function(index) {
+//    console.log(array[index])
+// })
+
+   // fractorial
+// function fractorial(number) {
+//    var output = 1
+//    for (var i = number; i > 0; i--) {
+//       output *= i
+//    }
+//    console.log(output)
+// }
+
+// fractorial(5)
+
+function fractorial(number) {
+   if (number > 0) {
+      return number * fractorial(number - 1)
+   }
+   return 1;
+}
+
+console.log(fractorial(5))
