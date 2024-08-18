@@ -1435,11 +1435,59 @@ Math object
 
 // fractorial(5)
 
-function fractorial(number) {
-   if (number > 0) {
-      return number * fractorial(number - 1)
-   }
-   return 1;
-}
+// function fractorial(number) {
+//    if (number > 0) {
+//       return number * fractorial(number - 1)
+//    }
+//    return 1;
+// }
 
-console.log(fractorial(5))
+// console.log(fractorial(5))
+
+/** ---------------------------------------------------------------------------------- */
+/**
+ *  * DOM there are three element
+ * - elements - all tags
+ * - attribute - class, id, tile,...
+ * - text - letter and number and characters
+ */
+
+// console.log(document)
+
+// document.write('Thanh Vui')
+// document.write('Thanh Vui')
+// document.write('Thanh Vui')
+// document.write('Thanh Vui')
+
+   // element ID
+// var headingID = document.getElementById('heading')
+// // console.log(headingID) // return tag h
+// console.log({ // return object of tag
+//    heading: headingID
+// })
+
+   // element class
+// var headingID = document.getElementsByClassName('header')
+// console.log(headingID)
+
+   // element tag
+// var headingID = document.getElementsByTagName('h2')      
+// console.log(headingID)
+
+   // there are two type of querySelector: querySelector and querySelectorAll
+// var querySelectorTag = document.querySelector('.header')
+// var querySelectorTag = document.querySelectorAll('.header')
+// console.log(querySelectorTag)
+
+   // element html collection
+// console.log(document.forms.testForm)
+
+// console.log(document.anchors)
+
+   // pratice
+// var listItems = document.querySelectorAll('.box-1 li')
+// console.log(listItems)
+
+var listItems = document.querySelector('.box-1')
+console.log(listItems)
+console.log(listItems.getElementsByTagName('li'))
