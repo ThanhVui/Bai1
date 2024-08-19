@@ -1488,6 +1488,36 @@ Math object
 // var listItems = document.querySelectorAll('.box-1 li')
 // console.log(listItems)
 
-var listItems = document.querySelector('.box-1')
-console.log(listItems)
-console.log(listItems.getElementsByTagName('li'))
+// var listItems = document.querySelector('.box-1')
+// console.log(listItems)
+// console.log(listItems.getElementsByTagName('li'))
+
+   // DOM attributes
+// var headingElement = document.querySelector('h1')
+// headingElement.className = 'heading'
+   // set a attributes for an element
+// var headingElement = document.querySelector('h1')
+// headingElement.setAttribute('class', 'header')
+
+   // get attribute from element
+// var headingElement = document.querySelector('h1')
+// headingElement.setAttribute('class', 'header')
+// /**
+//  * can use getAttribute to get attribute from element or
+//  *  if attribute real of element then use call title or class or id...
+//  */
+// console.log(headingElement.getAttribute('class')) // way 1
+// console.log(headingElement.id) // way 2
+
+/**
+ * How to get a text from element: use innerText and textContent
+ */
+var elementHeading = document.querySelector('h1')
+// getter
+console.log(elementHeading.innerText)
+console.log(elementHeading.textContent)
+console.log(elementHeading.innerHTML)
+// setter
+elementHeading.innerText = 'Thanh Vui HandSome'
+// elementHeading.textContent = 'Thanh Vui HandSome'
+// elementHeading.innerHTML = 'Thanh Vui HandSome'
