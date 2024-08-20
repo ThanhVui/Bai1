@@ -1518,6 +1518,6 @@ console.log(elementHeading.innerText)
 console.log(elementHeading.textContent)
 console.log(elementHeading.innerHTML)
 // setter
-elementHeading.innerText = 'Thanh Vui HandSome'
-// elementHeading.textContent = 'Thanh Vui HandSome'
+// elementHeading.innerText = 'Thanh Vui HandSome'
+elementHeading.textContent = 'Thanh Vui HandSome'
 // elementHeading.innerHTML = 'Thanh Vui HandSome'
