@@ -1512,12 +1512,50 @@ Math object
 /**
  * How to get a text from element: use innerText and textContent
  */
-var elementHeading = document.querySelector('h1')
-// getter
-console.log(elementHeading.innerText)
-console.log(elementHeading.textContent)
-console.log(elementHeading.innerHTML)
+// var elementHeading = document.querySelector('h1')
+// // getter
+// console.log(elementHeading.innerText)
+// console.log(elementHeading.textContent)
+// console.log(elementHeading.innerHTML)
 // setter
 // elementHeading.innerText = 'Thanh Vui HandSome'
-elementHeading.textContent = 'Thanh Vui HandSome'
+// elementHeading.textContent = 'Thanh Vui HandSome'
 // elementHeading.innerHTML = 'Thanh Vui HandSome'
+
+   // innerhtml and outerhtml
+// var boxElement = document.querySelector('.box')
+// // boxElement.innerHTML = '<h1>innerHTML</h1>'
+// // console.log(boxElement.innerHTML)
+// boxElement.outerHTML = '<span>outerHTML</span>'
+// console.log(boxElement.outerHTML)
+
+   // element node attributes
+// var boxElement = document.querySelector('.box')
+// console.log([boxElement])
+
+   // DOM style - use js to css for tags in html
+// var boxElements = document.querySelector('.box')
+
+// // boxElements.style.width = '100px'
+// // boxElements.style.height = '200px'
+// // boxElements.style.backgroundColor = 'red'
+
+// Object.assign(boxElements.style, {
+//    width: '50%',
+//    height: '100px',
+//    backgroundColor: 'green'
+// })
+
+// console.log(boxElements.computedStyleMap.backgroundColor)
+
+/**
+ * ClassList property
+ * 
+ * add
+ * contains
+ * remove
+ * toggle
+ */
+// var boxElements = document.querySelector('.box')
+
+// console.log(boxElements.classList)
