@@ -1559,3 +1559,107 @@ Math object
 // var boxElements = document.querySelector('.box')
 
 // console.log(boxElements.classList)
+
+// boxElements.classList.add('blue')
+// console.log(boxElements.classList.contains('red'))
+
+// setInterval(() => {
+//    boxElements.classList.add('red')
+// }, 2000);
+
+/**
+ * DOM event
+ * attribute events
+ * assign event using the element node
+ * 
+ * click
+ * resize
+ */
+
+// var h1Onclick = document.querySelector('.h1Onclick')
+// h1Onclick.onclick = function() {
+//    console.log(Math.random())
+// }
+
+// var h1Onclicks = document.querySelectorAll('.h1Onclick')
+// for (var i = 0; i < h1Onclicks.length; i++) {
+//    h1Onclicks[i].onclick = function(e) {
+//       console.log(e.target)
+//    }
+// }
+
+/**
+ * DOM event
+ * 
+ * input / checkbox
+ * select
+ * key up/ key down
+ */ 
+// var inputValue
+// var inputElement = document.querySelector('input[type="text"]')
+// inputElement.oninput = function(e) {
+//    // console.log(e.target.value)
+//    inputValue = e.target.value
+// }
+
+// var inputElement = document.querySelector('input[type="checkbox"]')
+// inputElement.onchange = function(e) {
+//    console.log(e.target.checked)
+// }
+
+// var inputElement = document.querySelector('select')
+// inputElement.onchange = function(e) {
+//    console.log(e.target.value)
+// }
+
+// var inputElement = document.querySelector('input[type="text"]')
+// inputElement.onkeydown = function(e) {
+//    console.log(e)
+// }
+
+   // onkeydown / onkeyup
+// document.onkeydown = function(e) {
+//    switch(e.which) {
+//       case 27:
+//          console.log('Exit')
+//          break;
+//       case 13:
+//          console.log('Send Message')
+//          break
+//    }
+// }
+
+/**
+ * DOM event
+ * 
+ * preventDefault
+ * stopPropagation
+ */
+// var aElements = document.links
+// for (var i = 0; i < aElements.length; i++) {
+//    aElements[i].onclick = function(e) {
+//       if (!e.target.href.startsWith('https://f8.edu.vn')) {
+//          e.preventDefault()
+//          alert('This page preventDefault')
+//       }
+//    }
+// }
+
+// var ulElement = document.querySelector('.ulstopPropagation')
+// ulElement.onmousedown = function(e) {
+//    e.preventDefault()
+// }
+// ulElement.onclick = function(e) {
+//    console.log(e.target)
+// }
+
+document.querySelector('.divStop').onClick =
+   function() {
+      console.log('DIV')
+   }
+
+document.querySelector('.clickMe').onclick =
+   function(e) {
+      e.stopPropagation()
+      console.log('Click Me!')
+   }

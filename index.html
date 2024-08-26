@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1 id="heading">Javascript Basic</h1>
@@ -39,6 +40,62 @@
         <h1>innerHTML</h1>
     </div>
 
+    <div>
+        <!-- <h1 onclick="console.log(Math.random())">DOM Event</h1> -->
+        <!-- <h1 onmouseover="console.log(Math.random())">DOM Event</h1> -->
+        <!-- <h1 onmouseout="console.log(Math.random())">DOM Event</h1> -->
+        <!-- <h1 onclick="console.log(this)">DOM Event</h1> -->
+        <!-- <h1 onclick="console.log(this.innerText)">DOM Event</h1> -->
+        <!-- <h1 onclick="console.log(this)">
+            <span onclick="console.log(this)">DOM Event</span>
+        </h1> -->
+        <h1 class="h1Onclick">
+            <span>DOM Event 1</span>
+        </h1>
+        <h1 class="h1Onclick">
+            <span>DOM Event 2</span>
+        </h1>
+        <h1 class="h1Onclick">
+            <span>DOM Event 3</span>
+        </h1>
+    </div>
+
+    <div>
+        <input type="text">
+        <input type="checkbox">
+
+        <select name="" id="">
+            <option value="value1">1</option>
+            <option value="value2">2</option>
+            <option value="value3">3</option>
+        </select>
+    </div>
+
+    <div>
+        <h1>preventDefault</h1>
+        <a href="https://f8.edu.vn">
+            Learn Programing
+        </a>
+        <br>
+        <a href="https://google.com.vn">
+            Google Search
+        </a>
+    </div>
+
+    <div>
+        <h1>stopPropagation</h1>
+        <input class="inputstopPropagation" placeholder="search">
+        <ul class="ulstopPropagation">
+            <li>javacript</li>
+            <li>java</li>
+            <li>kotlin</li>
+        </ul>
+    </div>
+
+    <div class="divStop">
+        div
+        <button class="clickMe">Click Me</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
