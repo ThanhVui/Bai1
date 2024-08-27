@@ -1653,13 +1653,13 @@ Math object
 //    console.log(e.target)
 // }
 
-document.querySelector('.divStop').onClick =
-   function() {
-      console.log('DIV')
-   }
+// document.querySelector('.divStop').onClick =
+//    function() {
+//       console.log('DIV')
+//    }
 
-document.querySelector('.clickMe').onclick =
-   function(e) {
-      e.stopPropagation()
-      console.log('Click Me!')
-   }
+// document.querySelector('.clickMe').onclick =
+//    function(e) {
+//       e.stopPropagation()
+//       console.log('Click Me!')
+//    }

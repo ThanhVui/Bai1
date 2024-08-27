@@ -1,0 +1,7 @@
+.ulstopPropagation {
+    display: none;
+}
+
+.inputstopPropagation:focus ~ ul {
+    display: block;
+}
