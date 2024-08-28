@@ -1662,4 +1662,36 @@ Math object
 //    function(e) {
 //       e.stopPropagation()
 //       console.log('Click Me!')
-//    }
+// }
+
+/**
+ * // 1. Event listener
+// 2. JSON
+// 3. Fetch
+// 4. DOM location
+// 5. Local storage
+// 6. Session storage
+// 7. Coding convention
+// 8. Best Practices
+// 9. Mistakes
+// 10. Performance
+
+// 1. Xử lý nhiều việc khi 1 event xảy ra
+// 2. Lắng nghe / Hủy bỏ lắng nghe
+ */
+
+// 1. Event listener
+var btn = document.getElementById('btn')
+btn.onclick = function() {
+  // work 1
+  console.log("Work 1");
+
+  // work 2
+  console.log("Work 2");
+
+  // work 3
+  alert("Work 3");
+}
+setTimeout(() => { // use overwite in this method to cancel listener
+   btn.onclick = function() {}
+}, 3000);
