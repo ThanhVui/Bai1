@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Work Tracker</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        h1, h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .taskList {
+            list-style-type: none;
+            padding: 0;
+        }
+        .taskList li {
+            background-color: #ffffff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        .taskList li:hover {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .deleteBtn {
+            margin-left: 10px;
+            color: #e74c3c;
+            cursor: pointer;
+        }
+        .completed {
+            text-decoration: line-through;
+            color: #7f8c8d;
+        }
+        .timeInput, .weekdaySelect {
+            margin-left: 5px;
+            padding: 5px;
+            border: 1px solid #bdc3c7;
+            border-radius: 3px;
+        }
+        .timeInput {
+            width: 85px;
+        }
+        #taskInput {
+            width: 70%;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #bdc3c7;
+            border-radius: 3px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Daily Work Tracker</h1>
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button onclick="addTask()">Add Task</button>
+    <h2>To-Do List</h2>
+    <ul id="taskList" class="taskList"></ul>
+    <h2>Completed Work</h2>
+    <ul id="completedList" class="taskList"></ul>
+
+    <script>
+        const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+        function addTask() {
+            const input = document.getElementById('taskInput');
+            const task = input.value.trim();
+            if (task) {
+                const li = createTaskElement(task);
+                document.getElementById('taskList').appendChild(li);
+                input.value = '';
+            }
+        }
+
+        function createTaskElement(task) {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <input type="checkbox" onchange="toggleComplete(this)">
+                <span>${task}</span>
+                <input type="time" class="timeInput startTime" onchange="updateTaskInfo(this.parentElement)">
+                <input type="time" class="timeInput endTime" onchange="updateTaskInfo(this.parentElement)">
+                <select class="weekdaySelect" onchange="updateTaskInfo(this.parentElement)">
+                    <option value="">Select day</option>
+                    ${weekdays.map(day => `<option value="${day}">${day}</option>`).join('')}
+                </select>
+                <span class="deleteBtn" onclick="removeTask(this.parentElement)">✖</span>
+            `;
+            return li;
+        }
+
+        function toggleComplete(checkbox) {
+            const taskElement = checkbox.parentElement;
+            const taskText = taskElement.querySelector('span');
+            taskText.classList.toggle('completed', checkbox.checked);
+            
+            if (checkbox.checked) {
+                document.getElementById('completedList').appendChild(taskElement.cloneNode(true));
+                taskElement.remove();
+            }
+        }
+
+        function updateTaskInfo(taskElement) {
+            const taskText = taskElement.querySelector('span');
+            const startTime = taskElement.querySelector('.startTime').value;
+            const endTime = taskElement.querySelector('.endTime').value;
+            const weekday = taskElement.querySelector('.weekdaySelect').value;
+            
+            let timeRange = '';
+            if (startTime && endTime) {
+                timeRange = ` (${startTime} - ${endTime})`;
+            } else if (startTime) {
+                timeRange = ` (From ${startTime})`;
+            } else if (endTime) {
+                timeRange = ` (Until ${endTime})`;
+            }
+            
+            let weekdayInfo = weekday ? ` [${weekday}]` : '';
+            
+            taskText.textContent = `${taskText.textContent.split(' (')[0].split(' [')[0]}${timeRange}${weekdayInfo}`;
+        }
+
+        function removeTask(taskElement) {
+            taskElement.remove();
+        }
+
+        document.getElementById('taskInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') addTask();
+        });
+    </script>
+</body>
+</html>
