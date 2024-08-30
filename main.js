@@ -1681,17 +1681,28 @@ Math object
  */
 
 // 1. Event listener
-var btn = document.getElementById('btn')
-btn.onclick = function() {
-  // work 1
-  console.log("Work 1");
+// var btn = document.getElementById('btn')
+// btn.onclick = function() {
+//   // work 1
+//   console.log("Work 1");
 
-  // work 2
-  console.log("Work 2");
+//   // work 2
+//   console.log("Work 2");
 
-  // work 3
-  alert("Work 3");
-}
-setTimeout(() => { // use overwite in this method to cancel listener
-   btn.onclick = function() {}
-}, 3000);
+//   // work 3
+//   alert("Work 3");
+// }
+// setTimeout(() => { // use overwite in this method to cancel listener
+//    btn.onclick = function() {}
+// }, 3000);
+
+// var btn = document.getElementById('btn')
+// btn.addEventListener('click', function(){
+//    console.log('work1')
+// })
+
+// setTimeout(function() {
+//    btn.removeEventListener('click', function() {
+//       console.log('work1')
+//    })
+// }, 3000);
