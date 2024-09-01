@@ -1730,3 +1730,135 @@ Math object
 // console.log(typeof JSON.stringify(null)) // convert javascript to json
 
 // promise
+// sync, async, pain, thoery, practice, example
+// sync / async
+//XMLHttpRequest, file reading, request animation frame
+
+// call back
+
+// sync
+// console.log(1)
+// console.log(2)
+//async
+// setTimeout(function() {
+//    console.log(1)
+// }, 1000)
+// console.log(2)
+
+// callback hell
+// pyramid of doom
+// setTimeout(function() {
+//    console.log(1) // work 1
+//    setTimeout(function() {
+//       console.log(1) // work 2
+//       setTimeout(function() {
+//          console.log(1) // work 3
+//          setTimeout(function() {
+//             console.log(1) // work 4
+//          }, 1000)
+//       }, 1000)
+//    }, 1000)
+// }, 1000)
+
+
+// two step to create promise
+// new promise, exxcutor
+// there are three state: pendding, fulfilled, rejected
+// promise to use halde async, we can use it to halde callback hell
+// to create new promise then (resolve and reject)
+
+// var promise = new Promise(
+//    // executer
+//    function(resolve, reject) {
+//       // logic
+//       // success: resolve()
+//       // fail: reject()
+//       // reject()
+//       // resolve()
+//    }
+// )
+
+// promise
+//    .then(function() {
+//       console.log('Successfully!')
+//    })
+//    .catch(function() {
+//       console.log('Failure!')
+//    })
+//    .finally(function() {
+//       console.log('Done!')
+//    })
+
+// function sleep(ms) {
+//    return new Promise(function(resolve) {
+//       setTimeout(resolve, ms)
+//    })
+// }
+
+// it will return after 1s
+// sleep(1000)
+//    .then(function() {
+//       console.log(1)
+//       return sleep(1000)
+//    })
+//    .then(function() {
+//       console.log(2)
+//       return sleep(1000)
+//    })
+//    .then(function() {
+//       console.log(3)
+//       return sleep(1000)
+//    })
+//    .then(function() {
+//       console.log(4)
+//       return sleep(1000)
+//    })
+
+// function sleep(ms) {
+//    return new Promise(function(resolve) {
+//       setTimeout(resolve, ms)
+//    })
+// }
+// // it will return after 1s
+// sleep(1000)
+//    .then(function() {
+//       console.log(1)
+//       return sleep(1000)
+//    })
+//    .then(function() {
+//       console.log(2)
+//       return new Promise(function(resolve, reject) {
+//          reject('Wrong!')
+//       })
+//       .catch(function(err) {
+//          console.log(err)
+//       })
+//    })
+//    .then(function() {
+//       console.log(3)
+//       return sleep(1000)
+//    })
+//    .then(function() {
+//       console.log(4)
+//       return sleep(1000)
+//    })
+
+
+/**
+//1. Let, const
+// 2. Template Literals
+// 3.Multi-line String
+// 4.Arrow function
+// 5. Classes
+// 6. Default parameter values
+// 7. Destructuring
+// 8. Rest parameters
+// 9. Spread
+// 10. Enhanced object literals
+// 11. Tagged template literal
+// 12. Modules
+ */
+
+// const sum = (a, b) => a + b
+// const sum = (a, b) => ({a: b, b: a})
+// console.log(sum(2, 4))  
