@@ -1706,3 +1706,27 @@ Math object
 //       console.log('work1')
 //    })
 // }, 3000);
+
+/**
+ * // 1. Event listener -- > OK 
+ * // 2. JSON 
+ * // 3. Fetch I 
+ * // 4. DOM location 
+ * // 5. Local storage 
+ * // 6. Session storage 
+ * // 7. Coding convention 
+ * // 8. Best Practices 
+ * // 9. Mistakes 
+ * // 10. Performance
+ */
+// Json
+// 1. is a define data (is a string)
+// javascript object notation
+// json: number, boolean, null, Array, object (depscyption, encode and decode)
+// Stringify / parse
+// var json = '{"name":"Vui", "age":18}' // '{"name":"Vui", "age":18}', 'true', 'false', 'number', 'null', '["java", "PHP"]'
+// var a = '1'
+// console.log(JSON.parse(a)) // convert json to javascript type
+// console.log(typeof JSON.stringify(null)) // convert javascript to json
+
+// promise
