@@ -1862,3 +1862,7 @@ Math object
 // const sum = (a, b) => a + b
 // const sum = (a, b) => ({a: b, b: a})
 // console.log(sum(2, 4)) 
+
+// const sum = (a, b) => a + b
+// const sum = (a, b) => ({a: b, b: a})
+// console.log(sum(4, 3)) 
